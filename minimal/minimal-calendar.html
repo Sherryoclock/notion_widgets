@@ -9,6 +9,7 @@
     <style>
         body {
     font-family: monospace;
+    margin: 0;      /* 防止浏览器默认左边距 */
 
 }
 
@@ -23,12 +24,15 @@
 
 #calendar {
     margin: 0;
+    width: 100%;        /* 新增 */
+    max-width: 500px;   /* 新增 */
     font-size: 14px;
-	transform: scale(0.75)
 }
 table {
     border-collapse: collapse;
     table-layout: fixed;
+    width: 100%;        /* 新增：自适应宽度 */
+    max-width: 500px;   /* 新增：限制最大宽度 */
     background-color: #fff;
     border: 2px solid #000000;
     box-shadow: 2px 2px 1px 0px #000000;
@@ -291,5 +295,6 @@ calendar(document.getElementById('calendar'), new Date());
     </script>
 </body>
 </html>
+
 
 
